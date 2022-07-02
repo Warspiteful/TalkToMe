@@ -3,31 +3,46 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
 
-
+define narrator = nvl_narrator
+define k_nvl = Character("kriminal28", kind=nvl, image="ki_pfp.png", callback=Phone_ReceiveSound)
+define MC_nvl = Character("talkchatguest", kind=nvl, image="placeholder_pfp.png", callback=Phone_SendSound)
+define y_nvl = Character("yinnrenn", kind=nvl, image="ren_pfp.png", callback=Phone_ReceiveSound)
 # The game starts here.
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
-
-    return
+"kriminal28 is online"
+k_nvl "you called?"
+MC_nvl "what do you want now?"
+k_nvl "wowwww"
+k_nvl "you really think i want something from you"
+y_nvl "seriously..."
+k_nvl "yknow thats just kinda sad"
+MC_nvl "stfu"
+k_nvl "you wound me"
+k_nvl "you called?"
+MC_nvl "what do you want now?"
+k_nvl "wowwww"
+k_nvl "you really think i want something from you"
+y_nvl "seriously..."
+k_nvl "yknow thats just kinda sad"
+MC_nvl "stfu"
+k_nvl "you wound me"
+k_nvl "you called?"
+MC_nvl "what do you want now?"
+k_nvl "wowwww"
+k_nvl "you really think i want something from you"
+y_nvl "seriously..."
+k_nvl "yknow thats just kinda sad"
+MC_nvl "stfu"
+k_nvl "you wound me"
+k_nvl "you called?"
+MC_nvl "what do you want now?"
+k_nvl "wowwww"
+k_nvl "you really think i want something from you"
+y_nvl "seriously..."
+k_nvl "yknow thats just kinda sad"
+MC_nvl "stfu"
+k_nvl "you wound me"
+return

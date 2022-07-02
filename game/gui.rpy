@@ -23,33 +23,33 @@ init python:
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = u'#0099ff'
+define gui.accent_color = u'#0099cc'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = u'#aaaaaa'
+define gui.idle_color = u'#888888'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
-define gui.idle_small_color = u'#888888'
+define gui.idle_small_color = u'#aaaaaa'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = u'#0099ff'
+define gui.hover_color = u'#66c1e0'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = u'#555555'
+define gui.selected_color = u'#ffffff'
 
 ## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = u'#aaaaaa7f'
+define gui.insensitive_color = u'#8888887f'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
-define gui.muted_color = u'#66c1ff'
-define gui.hover_muted_color = u'#99d6ff'
+define gui.muted_color = u'#003d51'
+define gui.hover_muted_color = u'#005b7a'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = u'#404040'
-define gui.interface_text_color = u'#404040'
+define gui.text_color = u'#ffffff'
+define gui.interface_text_color = u'#ffffff'
 
 
 ## Fonts and Font Sizes ########################################################
@@ -405,71 +405,3 @@ define gui.nvl_button_xalign = 0.0
 ## www.renpy.org/doc/html/style_properties.html#style-property-language
 
 define gui.language = "unicode"
-
-
-################################################################################
-## Mobile devices
-################################################################################
-
-init python:
-
-    ## This increases the size of the quick buttons to make them easier to touch
-    ## on tablets and phones.
-    if renpy.variant("touch"):
-
-        gui.quick_button_borders = Borders(60, 21, 60, 0)
-
-    ## This changes the size and spacing of various GUI elements to ensure they
-    ## are easily visible on phones.
-    if renpy.variant("small"):
-
-        ## Font sizes.
-        gui.text_size = 45
-        gui.name_text_size = 54
-        gui.notify_text_size = 38
-        gui.interface_text_size = 45
-        gui.button_text_size = 45
-        gui.label_text_size = 51
-
-        ## Adjust the location of the textbox.
-        gui.textbox_height = 360
-        gui.name_xpos = 120
-        gui.dialogue_xpos = 135
-        gui.dialogue_width = 1650
-
-        ## Change the size and spacing of various things.
-        gui.slider_size = 54
-
-        gui.choice_button_width = 1860
-        gui.choice_button_text_size = 45
-
-        gui.navigation_spacing = 30
-        gui.pref_button_spacing = 15
-
-        gui.history_height = 285
-        gui.history_text_width = 1035
-
-        gui.quick_button_text_size = 30
-
-        ## File button layout.
-        gui.file_slot_cols = 2
-        gui.file_slot_rows = 2
-
-        ## NVL-mode.
-        gui.nvl_height = 255
-
-        gui.nvl_name_width = 458
-        gui.nvl_name_xpos = 488
-
-        gui.nvl_text_width = 1373
-        gui.nvl_text_xpos = 518
-        gui.nvl_text_ypos = 8
-
-        gui.nvl_thought_width = 1860
-        gui.nvl_thought_xpos = 30
-
-        gui.nvl_button_width = 1860
-        gui.nvl_button_xpos = 30
-
-
-
