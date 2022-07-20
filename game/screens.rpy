@@ -172,19 +172,15 @@ style say_dialogue:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#input
 
-screen input(prompt):
-    style_prefix "input"
+screen input(prompt, someText = ""):
 
-    window:
+    window style "input_window":
+        has vbox
+        yalign .2
+        xalign 0.5
 
-        vbox:
-            xalign gui.dialogue_text_xalign
-            xpos gui.dialogue_xpos
-            xsize gui.dialogue_width
-            ypos gui.dialogue_ypos
-
-            text prompt style "input_prompt"
-            input id "input"
+        text prompt style "input_prompt"
+        input id "input" style "input_text" default someText
 
 style input_prompt is default
 
@@ -1330,7 +1326,6 @@ screen nvl_dialogue(dialogue):
 
             fixed:
                 yfit gui.nvl_height is None
-
                 if d.who is not None:
 
                     text d.who:

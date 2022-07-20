@@ -45,6 +45,13 @@ default pronounlist = [
     # __("PRONOUN GOES HERE"), # 3
 ]
 
+default genderlist = [
+    __("Male"), # 0
+    __("Female"), # 1
+    __("Non-Binary"), # 2
+    # __("GENDER GOES HERE"), # 3
+]
+
 # TODO: If you would like to add more pronouns, replace the above "PRONOUN GOES HERE" with the pronouns you want to use and remove the # at the beginning of the line. You can add as many pronouns as necessary.
 
 # The next code sets the default pronouns for the main character. For this example, the default is set to "2", making "they/them" the default pronouns.
@@ -53,6 +60,9 @@ default pronounlist = [
 
 default pronoun = 0
 default selectedpronouns = pronounlist[pronoun]
+
+default gender = 0
+default selectedgender = genderlist[gender]
 
 # Here is an example of how to show the pronouns in your game.
 
